@@ -572,7 +572,7 @@ def _build_experiment_config():
     os.environ['WANDB_MODE'] = 'disabled'
     # Our progress.csv epoch logger (one row per evaluation/epoch)
     algo = 'csil-offline' if _OFFLINE_FLAG.value else 'csil'
-    run_dir = os.path.join(_LOGDIR.value, algo, _ENV_NAME.value, f"seed-{_SEED.value}")
+    run_dir = os.path.join(_LOGDIR.value, algo, _ENV_NAME.value, f"d{_N_DEMONSTRATIONS.value}", f"s{_SEED.value}")
     csv_path = os.path.join(run_dir, "progress.csv")
     logger_fact = make_progress_logger_factory(
         csv_path, eval_every=_EVAL_RATIO.value, episodes_per_eval=_N_EVAL_EPS.value

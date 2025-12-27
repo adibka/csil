@@ -1,0 +1,11 @@
+task,algo,actor_lr,critic_lr,reward_lr,batch_size,target_smoothing_tau,temperature_fixed,policy_pretrain_steps,policy_pretrain_lr,critic_pretrain_steps,critic_pretrain_lr,network,critic_layernorm,norm_random_return,norm_expert_return,notes
+HalfCheetah-v2,CSIL,0.0003,0.0003,0.001,256,0.005,0.01,25000,0.001,5000,0.001,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-280,12106,CSIL-specific pretraining; KL penalty = temperature_fixed
+HalfCheetah-v2,IQ-Learn,0.00003,0.0003,,256,0.005,0.01,0,,0,,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-280,12106,IQ-Learn v0 reg; no BC pretrain in main baseline
+Ant-v2,CSIL,0.0003,0.0003,0.001,256,0.005,0.01,25000,0.001,5000,0.001,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-325,5817,CSIL-specific pretraining; KL penalty = temperature_fixed
+Ant-v2,IQ-Learn,0.00003,0.0003,,256,0.005,0.01,0,,0,,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-325,5817,IQ-Learn v0 reg; no BC pretrain in main baseline
+Walker2d-v2,CSIL,0.0003,0.0003,0.001,256,0.005,0.01,25000,0.001,5000,0.001,"MLP: 2x256, ELU (critic uses LayerNorm)",True,1,5467,CSIL-specific pretraining; KL penalty = temperature_fixed
+Walker2d-v2,IQ-Learn,0.00003,0.0003,,256,0.005,0.01,0,,0,,"MLP: 2x256, ELU (critic uses LayerNorm)",True,1,5467,IQ-Learn v0 reg; no BC pretrain in main baseline
+Humanoid-v2,CSIL,0.0003,0.0003,0.001,256,0.005,0.01,500,0.001,5000,0.001,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-379,10165,CSIL-specific pretraining; KL penalty = temperature_fixed
+Humanoid-v2,IQ-Learn,0.00003,0.0003,,256,0.005,0.01,0,,0,,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-379,10165,IQ-Learn v0 reg; no BC pretrain in main baseline
+hammer-v0,CSIL,0.0003,0.0003,0.001,256,0.005,0.03,25000,0.0001,5000,0.001,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-274,12794,CSIL-specific pretraining; KL penalty = temperature_fixed
+hammer-v0,IQ-Learn,0.00003,0.0003,,256,0.005,0.03,0,,0,,"MLP: 2x256, ELU (critic uses LayerNorm)",True,-274,12794,IQ-Learn v0 reg; no BC pretrain in main baseline

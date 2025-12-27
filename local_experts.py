@@ -3,6 +3,7 @@
 # Returns step dicts compatible with RLDS-style keys used downstream:
 #   observation, next_observation, action, reward, discount,
 #   is_first, is_last, is_terminal   (all per-step tensors)
+# We use IQLearn expert datasets format (.pkl)
 from __future__ import annotations
 import os, glob, pickle
 from typing import Dict, List, Tuple
